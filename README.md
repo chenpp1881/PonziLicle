@@ -24,9 +24,6 @@
 ├── train.py                      # Classification model with fusion module
 ├── run.py                        # Main script to train classifier
 ├── StatisticalAnalysis.py        # Statistical significance tests and plots
-├── Dataset.csv                   # Dataset file containing code and labels
-├── llm_explanations.json         # Output from LLM explanations
-├── static_results.json           # Output from static analysis
 └── Results/                      # Output folder for training and evaluation
 ```
 
@@ -57,16 +54,16 @@ seaborn
 
 ## 🚀 Usage
 
-### Step 1: Generate LLM Explanations
-
-```bash
-python generate_llm_explaination.py
-```
-
-### Step 2: Perform Static Analysis
+### Step 1: Perform Static Analysis
 
 ```bash
 python generate_static_analysis.py
+```
+
+### Step 2: Generate LLM Explanations
+
+```bash
+python generate_llm_explaination.py
 ```
 
 ### Step 3: Train Detection Model
@@ -79,11 +76,6 @@ python run.py \
     --batch_size 4 \
     --savepath ./Results
 ```
-
-### Step 4: Evaluation and Error Analysis
-
-- Results: `Results/result_record_val_.csv`
-- Misclassified samples: `fn_ponzi_misclassified.json`
 
 ### Step 5: Statistical Validation
 
@@ -100,18 +92,3 @@ python StatisticalAnalysis.py
 3. **referral_mechanism**: Presence of inviter, referrer, or hierarchy-based rewards.
 4. **withdrawal_control**: Lock-ups, time checks, or other withdrawal restrictions.
 5. **camouflage**: Misleading naming (e.g., "staking", "mining") for hidden purposes.
-
----
-
-## 📄 Citation
-
-```bibtex
-@misc{ponziprober2025,
-  title   = {PonziProber: A Hybrid Detection Framework Combining Static Analysis and Multi-Aspect LLM Explanations for Smart Contract Ponzi Schemes},
-  author  = {Anonymous},
-  year    = {2025},
-  note    = {Under submission to ICSE 2026}
-}
-```
-
----
