@@ -71,7 +71,7 @@ python generate_llm_explaination.py
 ```bash
 python run.py \
     --code_model_path codet5 \
-    --nl_model_path t5 \
+    --nl_model_path codet5 \
     --epoch 50 \
     --batch_size 4 \
     --savepath ./Results
